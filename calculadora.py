@@ -1,3 +1,4 @@
+while True:
 print("====== CALCULADORA ======")
 print("1. Sumar")
 print("2. Restar")
@@ -21,6 +22,6 @@ elif opcion == "4":
     print("Elegiste dividir")
 elif opcion == "5":
     print("Hasta luego")
-
+    break
 else:
     print("Opcion no valida")
