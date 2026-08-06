@@ -12,47 +12,22 @@ def pedir_numeros():
 
     return primer_numero, segundo_numero
 
-def sumar():      
-        try:
-            primer_numero, segundo_numero = pedir_numeros()
+def calcular(operacion):
+    try:
+        primer_numero, segundo_numero = pedir_numeros()
+        if operacion == "+":
             resultado = primer_numero + segundo_numero
-
-            print("El resultado es:",resultado)
-            input("Presiona ENTER para continuar...")
-
-        except ValueError: 
-            print("Entrada inválida. Debes escribir un número.")
-def resta():
-        try:
-            primer_numero, segundo_numero = pedir_numeros()
+        elif operacion == "-":
             resultado = primer_numero - segundo_numero
-
-            print("El resultado es:",resultado)
-            input("Presiona ENTER para continuar...")
-
-        except ValueError: 
-            print("Entrada inválida. Debes escribir un número.")
-def multiplicar():
-        try:
-            primer_numero, segundo_numero = pedir_numeros()
+        elif operacion == "*":
             resultado = primer_numero * segundo_numero
-
-            print("El resultado es:",resultado)
-            input("Presiona ENTER para continuar...")
-
-        except ValueError: 
-            print("Entrada inválida. Debes escribir un número.")
-    
-def dividir():
-        try:
-            primer_numero, segundo_numero = pedir_numeros()
+        elif operacion == "/":
             resultado = primer_numero / segundo_numero
 
-            print("El resultado es:",resultado)
-            input("Presiona ENTER para continuar...")
-
-        except ValueError: 
-            print("Entrada inválida. Debes escribir un número.")
+        print("El resultado es:", resultado)
+        input("Presiona ENTER para continuar...")
+    except ValueError: 
+        print("Entrada inválida. Debes escribir un número.")
     
 
 while True:
@@ -61,16 +36,16 @@ while True:
     opcion = input("Seleccione una opcion:")
 
     if opcion == "1":
-        sumar()
+        calcular("+")
 
     elif opcion == "2":
-        resta()
+        calcular("-")
 
     elif opcion == "3":
-        multiplicar()
+        calcular("*")
 
     elif opcion == "4":
-        dividir()
+        calcular("/")
     elif opcion == "5":
         print("Hasta luego")
         break
