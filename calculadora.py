@@ -28,6 +28,10 @@ def calcular(operacion):
         input("Presiona ENTER para continuar...")
     except ValueError: 
         print("Entrada inválida. Debes escribir un número.")
+        input("Presiona ENTER para continuar...")
+    except ZeroDivisionError:
+        print("No puedes dividir por 0")
+        input("Presiona ENTER para continuar...")
     
 
 while True:
